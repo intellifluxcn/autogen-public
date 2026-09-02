@@ -194,8 +194,9 @@ laboratory, so watch for batch effects.
 
 ## License
 
-**Not yet chosen — see `LICENSE`.** This repository must not be published
-before a license is selected.
+MIT — see [`LICENSE`](LICENSE). The MIT text covers "this software and
+associated documentation files", so the code, the docs and the prompt files in
+this repository are all under the same terms.
 
 ## Citation
 
