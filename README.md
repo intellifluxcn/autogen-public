@@ -36,18 +36,18 @@ development repository. What is here:
 
 - the four pipeline stages and the code they need to run
 - all prompts (`prompts/`, with an index of the ones that are built inline)
+- the web UI (`web_ui/`) — React frontend plus its FastAPI backend
 - the operating instructions needed to run it (in this README)
 
 What is deliberately **not** here, and why:
 
 | Excluded | Reason |
 | --- | --- |
-| Web UI (`web_ui/`) and deployment configs | Operational, not part of the method |
+| Deployment configs (`deploy/`, CI workflows) | Operational, and they carried host-specific values |
 | Internal engineering notes (`CLAUDE.md`, `AGENTS.md`) | Internal operations |
 | Development documentation (`docs/`) | Accumulated during development, not written for external readers. What you need to *operate* the pipeline is in this README instead |
 | Test suite | Depends on internal fixtures |
 | Vendor API reference for the browser-automation service | Third-party documentation, not ours to redistribute |
-| Known-DB direct retrieval (`download/known_db_fetch.py`, `known_db_ingest.py`) | Only ever driven from the web UI backend, which is excluded. The `KNOWN_DB_FETCH_*` switches in `.env.example` therefore have no effect here — expect fewer strict E+R triads than the internal version |
 | Any Sci-Hub retrieval path | Removed on purpose — see below |
 
 ### Removed: Sci-Hub fallback

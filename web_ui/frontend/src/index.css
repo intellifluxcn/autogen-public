@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 font-sans;
+  }
+  
+  * {
+    @apply border-gray-200;
+  }
+}
+
+@layer components {
+  .stage-card {
+    @apply bg-white rounded-lg shadow-sm border p-4 transition-all duration-200 hover:shadow-md;
+  }
+  
+  .stage-card.pending {
+    @apply border-gray-300 bg-gray-50;
+  }
+  
+  .stage-card.in-progress {
+    @apply border-blue-300 bg-blue-50;
+  }
+  
+  .stage-card.completed {
+    @apply border-green-300 bg-green-50;
+  }
+  
+  .stage-card.error {
+    @apply border-red-300 bg-red-50;
+  }
+  
+  .progress-bar {
+    @apply w-full bg-gray-200 rounded-full h-2 overflow-hidden;
+  }
+  
+  .progress-fill {
+    @apply h-full transition-all duration-500 ease-out;
+  }
+  
+  .progress-fill.find {
+    @apply bg-stage-find;
+  }
+  
+  .progress-fill.analyze {
+    @apply bg-stage-analyze;
+  }
+  
+  .progress-fill.download {
+    @apply bg-stage-download;
+  }
+  
+  .progress-fill.complete {
+    @apply bg-stage-complete;
+  }
+}
+
+/* Custom scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(156 163 175) rgb(243 244 246);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgb(243 244 246);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(156 163 175);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(107 114 128);
+}
+
+/* Artifacts table scrollbar: keep dataset column readable. */
+.artifacts-table-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(156 163 175) rgb(243 244 246);
+  scrollbar-gutter: stable;
+}
+
+.artifacts-table-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.artifacts-table-scrollbar::-webkit-scrollbar-track {
+  background: rgb(243 244 246);
+  border-radius: 4px;
+}
+
+.artifacts-table-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(156 163 175);
+  border-radius: 4px;
+  min-height: 48px;
+}
+
+.artifacts-table-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(107 114 128);
+}
+
+/* Animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
