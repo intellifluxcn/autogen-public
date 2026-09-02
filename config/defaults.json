@@ -1,0 +1,8 @@
+{
+  "_comment": "Runtime defaults loaded by web_ui/backend/main.py. Override at deploy time via env vars (see .env.example). Do not hardcode these values in source.",
+  "cors": {
+    "default_allowed_origins": [
+      "http://localhost:3000"
+    ]
+  }
+}

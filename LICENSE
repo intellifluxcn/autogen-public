@@ -1,0 +1,22 @@
+LICENSE NOT YET SELECTED
+========================
+
+⚠️  This file is a PLACEHOLDER, not a license.
+
+Do not publish this repository until a license has been selected and its full
+text has replaced the contents of this file.
+
+In most jurisdictions a public repository with no license defaults to "all
+rights reserved", meaning readers may not legally copy, modify, or redistribute
+it. That directly contradicts the paper's data availability statement, which
+promises the code is published "for researchers to access, reproduce, and
+further develop".
+
+Recommendation and reasoning are in the internal pre-publication review
+report held by the project team:
+
+  Code               MIT
+  Docs and prompts   CC-BY-4.0
+
+Once selected, REPLACE the entire contents of this file with the full license
+text.

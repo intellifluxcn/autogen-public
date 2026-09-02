@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Node
+node_modules/
+.obsidian/
+
+# Build output
+web_ui/frontend/dist/
+
+# Test data (contains large PDFs ~80MB)
+tests/test_data/
+
+# Archive/demo results
+archive/
+
+# Private keys / credentials
+*.key
+*.pem
+
+# Handoff documentation
+handoff/*.md
+
+# Environment variables
+.env
+
+# agentic SDLC framework (vendored locally; not part of this repo)
+sdlc/
+
+# agentic toolkit scripts (vendored locally; coexist with project scripts/)
+scripts/create-issue-labels.sh
+scripts/init-project.sh
+scripts/make-playground.sh
+scripts/merge_project_config.py
+scripts/project_config.py
+scripts/simulate-sprint.sh
+scripts/substitute_placeholders.py
+scripts/umbrella_lint.py
+# IDE
+.idea/
+.claude/
+.vscode/
+.codex/
+# macOS
+.DS_Store
+
+# SDLC scratch (brainstorm drafts, /sprint-* skill tempfiles land here)
+tmp/
+
+# Runtime temp/debug artifacts (download stage)
+.browser_profile_ttl.lock
+browser_profile/
+outputs/analyses/
+outputs/datasets/
+outputs/papers/
+outputs/download_debug/
+outputs/notes/
+outputs/db-backups/
+
+# Local quality/report caches
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Generated intermediate artifacts in docs/ (keep .md/.pdf/.pptx sources)
+docs/*.html

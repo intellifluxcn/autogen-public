@@ -1,0 +1,79 @@
+[tool.poetry]
+name = "autogen"
+version = "0.1.0"
+description = ""
+authors = ["Dim-Tiger <84215180+Dim-Tiger@users.noreply.github.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+autogen-agentchat = "^0.6.2"
+autogen-ext = {extras = ["openai"], version = "^0.6.2"}
+openai = "^2.7.2"
+playwright = "^1.53.0"
+aiofiles = "^24.1.0"
+markitdown = "^0.1.2"
+json-schema-to-pydantic = "^0.4.1"
+mcp = "^1.12.0"
+pdfplumber = "^0.11.7"
+# Read .xlsx supplementary tables in the qualify sandbox
+openpyxl = "^3.1.0"
+python-dotenv = "^1.0.0"
+# Web UI dependencies
+fastapi = ">=0.104.0"
+uvicorn = {extras = ["standard"], version = ">=0.31.1"}
+starlette = ">=0.47.2"
+python-socketio = ">=5.14.0"
+python-engineio = ">=4.11.0"
+python-multipart = ">=0.0.27"
+pydantic = "^2.5.0"
+websockets = "^15.0"
+nest-asyncio = "^1.6.0"
+# Database (PostgreSQL)
+psycopg = {extras = ["binary"], version = "^3.2.0"}
+# HTTP client for Browser Use API
+aiohttp = "^3.9.0"
+# Browser automation for dataset downloads
+browser-use = "0.12.7"
+# Note: beautifulsoup4 and lxml can be removed if not used by other components
+beautifulsoup4 = "^4.12.0"
+lxml = ">=6.1.0"
+# Cloud storage
+boto3 = "^1.42.0"
+oss2 = "^2.19.1"
+# Authentication
+PyJWT = "^2.8.0"
+bcrypt = "^4.0"
+cryptography = ">=46.0.6"
+importlib-metadata = "^8.5.0"
+slowapi = "^0.1.9"
+psycopg-pool = "^3.3.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.0"
+pytest-asyncio = "^0.24.0"
+pytest-cov = "^5.0.0"
+httpx = "^0.28.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["test_code"]
+asyncio_mode = "auto"
+pythonpath = ["."]
+markers = [
+    "unit: fast isolated tests",
+    "integration: cross-module tests; may use tmp files",
+    "live: requires API keys and network (not run in default CI)",
+]
+filterwarnings = [
+    # Dependencies may use deprecated datetime/asyncio helpers on newer Python.
+    "ignore:.*datetime\\.datetime\\.utcnow\\(\\).*:DeprecationWarning",
+    "ignore:.*asyncio\\.iscoroutinefunction.*:DeprecationWarning",
+    "ignore:.*asyncio\\.get_event_loop_policy.*:DeprecationWarning",
+    "ignore:.*asyncio\\.set_event_loop_policy.*:DeprecationWarning",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
