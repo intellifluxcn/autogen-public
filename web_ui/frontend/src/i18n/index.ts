@@ -164,7 +164,7 @@ export const translations: Translation = {
     'manager.query_placeholder': 'e.g., "breast cancer"[Title] AND humans[mh]',
     'manager.query_desc': 'Describe the research topic you want to explore',
     'manager.max_papers_label': 'Max Papers to Find',
-    'manager.limit_note': 'Limit: 1-5000 papers (>200 may take hours; SciHub recommended for high targets)',
+    'manager.limit_note': 'Limit: 1-5000 papers (>200 may take hours; only open-access papers are retrieved, so the yield at high targets is lower)',
     // publication date range filter
     'manager.date_range_label': 'Publication Date Range (optional)',
     'manager.date_start_label': 'Start date',
@@ -723,7 +723,7 @@ export const translations: Translation = {
     'manager.query_placeholder': '例如："breast cancer"[Title] AND humans[mh]',
     'manager.query_desc': '描述您想要探索的研究主题',
     'manager.max_papers_label': '最大查找论文数',
-    'manager.limit_note': '限制：1-5000 篇论文（>200 篇可能需数小时；高目标建议开启 SciHub 兜底）',
+    'manager.limit_note': '限制：1-5000 篇论文（>200 篇可能需数小时；仅检索开放获取论文，目标越高实际获得率越低）',
     // publication date range filter
     'manager.date_range_label': '发表日期范围（可选）',
     'manager.date_start_label': '起始日期',

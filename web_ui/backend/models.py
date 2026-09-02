@@ -259,8 +259,8 @@ class CreateProjectRequest(BaseModel):
     # = max_papers × 3 starts hitting the cap above ~3333. _fill_to_target_pubmed
     # currently treats len(batch) < retmax as "query exhausted" and stops
     # paginating — so above ~3333 the effective candidate count plateaus
-    # at ~10000 (≈ ~3000-5000 successful downloads at OA-only success
-    # rate, or 5000+ with SciHub). Lifting beyond 5000 requires changing
+    # at ~10000 (≈ ~3000-5000 successful downloads at the open-access
+    # success rate). Lifting beyond 5000 requires changing
     # _fill_to_target_pubmed to chunk ESearch at PAGE_SIZE=10000.
     max_papers: Optional[int] = Field(default=10, ge=1, le=5000)
     parallel_pipeline: bool = False
